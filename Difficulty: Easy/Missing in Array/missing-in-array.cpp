@@ -8,7 +8,7 @@ using namespace std;
 class Solution {
   public:
     int missingNum(vector<int>& arr) {
-        int n = arr.size() + 1; // Because one number is missing from 1 to n
+        int n = arr.size() + 1;
         unordered_set<int> numSet(arr.begin(), arr.end());
 
         for (int i = 1; i <= n; ++i) {
@@ -17,7 +17,7 @@ class Solution {
             }
         }
 
-        return -1; // Should not reach here if input is valid
+        return -1; 
     }
 };
 
