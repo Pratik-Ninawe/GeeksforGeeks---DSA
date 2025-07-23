@@ -4,16 +4,20 @@ class Solution {
     vector<int> bfs(vector<vector<int>> &adj) {
         // Code here
         int n=adj.size();
-        vector<int> bfsT;
         int vis[n]={0};
         vis[0]=1;
         queue<int> q;
         q.push(0);
         
+        vector<int> bfsT;
+        // bfst.push_back()
+        
         while(!q.empty()){
+            
             int node=q.front();
             q.pop();
             bfsT.push_back(node);
+            
             
             for(auto it: adj[node]){
                 if(!vis[it]){
